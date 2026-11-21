@@ -4,6 +4,8 @@
 
 A complete JTAG TAP controller and boundary-scan wrapper, verified on a two-device scan chain that also runs a board-level interconnect test.
 
+![Architecture](docs/diagrams/architecture.svg)
+
 ## Design
 
 - `rtl/jtag_tap.sv`: the 16-state TAP FSM, a 4-bit IR (captures `…01`, updates on the falling edge), and asynchronous TRST
@@ -46,6 +48,12 @@ make test
 make lint
 make synth
 ```
+
+## Test run
+
+Output of the CI command (`make test lint`), captured from a local run:
+
+![Test run](docs/screenshots/test_run.svg)
 
 ## Limitations / next steps
 
